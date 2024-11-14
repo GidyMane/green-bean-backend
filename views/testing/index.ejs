@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form class="form" method="POST" action="/api/testing/post">
+    <label for="NameTextField">Value1</label>
+        <input type="text" class="form-control" id="NameTextField"
+         placeholder="key value 1" name="key1" value="" required>
+         <label for="NameTextField">Value2</label>
+         <input type="text" class="form-control" id="NameTextField"
+          placeholder="key value 2" name="key2" value="" required>
+    <input type="submit" class="button-3" id="submit" value="Make DB"></input>
+    
+  </form>
+  
+  <form class="form" method="GET" action="/api/testing/search">
+    <label for="NameTextField">Search</label>
+        <input type="text" class="form-control" id="NameTextField"
+         placeholder="Search Value" name="searchVal" value="" required>
+    <input type="submit" class="button-3" id="submit" value="Find Value"></input>
+  </form>
+
+  <% if (data && data.length) { %>
+    <ul>
+      <% data.forEach(doc => { %>
+        <li>ID: <%= doc.id %>, Key1: <%= doc.key1 %>, Key2: <%= doc.key2 %></li>
+        <a href="/api/testing/edit/<%= doc.id %>"><input  class="button-3" id="submit" value="Edit"></input></a>
+        <a href="/api/testing/delete/<%= doc.id %>"><input  class="button-3" id="submit" value="Delete"></input></a>
+      <% }) %>
+    </ul>
+  <% } else if (results) { %>
+    <ul>
+      <% results.forEach(doc => { %>
+        <li>ID: <%= doc.id %>, Key1: <%= doc.key1 %>, Key2: <%= doc.key2 %></li>
+        <a href="/api/testing/edit/<%= doc.id %>"><input  class="button-3" id="submit" value="Edit"></input></a>
+        <a href="/api/testing/delete/<%= doc.id %>"><input  class="button-3" id="submit" value="Delete"></input></a>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>No documents found in the collection.</p>
+  <% } %>
+  </body>
+
+  
+</html>

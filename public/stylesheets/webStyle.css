@@ -1,0 +1,135 @@
+.header-assets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+}
+
+.header-assets img, .header-assets h1{
+    padding: 0.25em;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        background-color: lightblue;
+    }
+
+}
+h1, h2{
+    font-family: "Roboto", sans-serif;
+}
+
+#rental{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset{
+    width: 75vw;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    flex-basis: 45%;
+}
+
+.durbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    flex-basis: 25%;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    font-family: "Monda", sans-serif;
+    font-size: 1em;
+}
+
+.infoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Monda", sans-serif;
+    font-size: 1em;
+}
+
+.durcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    font-family: "Monda", sans-serif;
+    font-size: 1em;
+}
+
+.agree{
+    width: 40%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.buttons{
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+textarea{
+    max-width: 100%;
+}
+
+@media (max-width: 50rem){
+    .box{
+        flex-wrap: nowrap;
+        flex-basis: 100%;
+    }
+
+    .resume, .travel{
+        width: 90%;
+    }
+
+    .job-box{
+        flex-direction: column;
+    }
+
+    .con{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+}
+
+a.button {
+    padding: 1px 6px;
+    border: 1px outset buttonborder;
+    border-radius: 3px;
+    color: buttontext;
+    background-color: buttonface;
+    text-decoration: none;
+}
+
+.venueImage{
+    padding: 2rem;
+}
+
+.information{
+    padding: 2rem;
+}

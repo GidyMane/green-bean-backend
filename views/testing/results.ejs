@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+  
+  <form class="form" method="GET" action="/api/testing/search">
+    <label for="NameTextField">Search</label>
+        <input type="text" class="form-control" id="NameTextField"
+         placeholder="Search Value" name="searchVal" value="" required>
+    <input type="submit" class="button-3" id="submit" value="Find Value"></input>
+  </form>
+
+  <%  if (results && results.length) { %>
+    <ul>
+      <% results.forEach(doc => { %>
+        <li>ID: <%= doc.id %>, Key1: <%= doc.key1 %>, Key2: <%= doc.key2 %></li>
+        <a href="/api/testing/edit/<%= doc.id %>"><input  class="button-3" id="submit" value="Edit"></input></a>
+        <a href="/api/testing/delete/<%= doc.id %>"><input  class="button-3" id="submit" value="Delete"></input></a>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>No documents found in the collection.</p>
+  <% } %>
+
+  <a href="/api/testing"><input  class="button-3" id="submit" value="Go Back"></input></a>
+  </body>
+
+  
+</html>

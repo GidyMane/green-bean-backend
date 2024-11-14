@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form class="form" method="POST">
+        <label for="NameTextField">Value1</label>
+        <% if (data) { %>
+            <input type="text" class="form-control" id="NameTextField"
+             placeholder="key value 1" name="key1" value="<%= data.key1 %>" required>
+             <label for="NameTextField">Value2</label>
+             <input type="text" class="form-control" id="NameTextField"
+              placeholder="key value 2" name="key2" value="<%= data.key2 %>" required>
+            <% } else { %>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="key value 1" name="key1" value="" required>
+                <label for="NameTextField">Value2</label>
+                <input type="text" class="form-control" id="NameTextField"
+                 placeholder="key value 2" name="key2" value="" required>
+        <% } %>
+        <input type="submit" class="button-3" id="submit" value="Make DB"></input>
+      </form>
+  </form>
+  </body>
+
+  
+</html>

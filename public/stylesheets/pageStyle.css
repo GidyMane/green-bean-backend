@@ -1,0 +1,39 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+
+.npage {
+    position: relative;
+    border-right: 150px;
+    background-color: #f1f1f1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+}
+
+.image-plcehodler{
+    position: relative;
+    margin-top: 10px;
+}
+
+h1{
+
+}
